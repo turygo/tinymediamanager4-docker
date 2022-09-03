@@ -27,7 +27,11 @@ RUN \
 	    zenity \
         tar \
       	zstd
-
+        
+RUN echo "https://mirrors.aliyun.com/alpine/edge/testing/" >> /etc/apk/repositories \
+    && apk -U --no-cache update && apk -U --no-cache --allow-untrusted add \
+      font-noto-cjk \
+      && rm -rf /var/cache/*
 
 # Fix Java Segmentation Fault
 RUN wget "https://www.archlinux.org/packages/core/x86_64/zlib/download" -O /tmp/libz.tar.xz \
