@@ -10,11 +10,13 @@ log() {
 # Make sure mandatory directories exist.
 mkdir -p /config/logs
 
-if [ ! -f /config/tmm.jar ]; then
-    cp -r /defaults/* /config/
-    cd /config
-    tar --strip-components=1 -zxvf /config/tmm.tar.gz
-fi
+# if [ ! -f /config/tmm.jar ]; then
+
+# always unzip tmm files to solve that it won't upgraded once installed by docker
+cp -r /defaults/* /config/
+cd /config
+tar --strip-components=1 -zxvf /config/tmm.tar.gz
+# fi
 
 # Take ownership of the config directory content.
 chown -R $USER_ID:$GROUP_ID /config/*
