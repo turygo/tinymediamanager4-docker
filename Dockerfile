@@ -16,7 +16,8 @@ WORKDIR /tmp
 # Download TinyMediaManager
 RUN \
     mkdir -p /defaults && \
-    wget ${TMM_URL} -O /defaults/tmm.tar.gz
+    rm -f /defaults/tmm_*.tar.gz && \
+    wget ${TMM_URL} -O /defaults/tmm_${TMM_VERSION}.tar.gz
 
 # Install dependencies.
 RUN \
