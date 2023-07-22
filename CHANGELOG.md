@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.3.12] - 2023-07-22
+
+### Added
+
+### Changed
+- Upgraded TMM version to latest (v4.3.12).
+
+### Fixed
+Add version Check to fix docker upgrade problem.
+
+
 ## [4.3.11.1] - 2023-04-01
 
 ### Added
