@@ -35,12 +35,12 @@ RUN echo "https://mirrors.aliyun.com/alpine/edge/testing/" >> /etc/apk/repositor
       && rm -rf /var/cache/*
 
 # Fix Java Segmentation Fault
-RUN wget "https://www.archlinux.org/packages/core/x86_64/zlib/download" -O /tmp/libz.tar.xz \
+RUN wget "https://www.archlinux.org/packages/core/x86_64/zlib/download" -O /tmp/libz.tar.zst \
     && mkdir -p /tmp/libz \
-    && tar -xf /tmp/libz.tar.xz -C /tmp/libz \
-    && cp /tmp/libz/usr/lib/libz.so.1.2.13 /usr/glibc-compat/lib \
+    && tar -xf /tmp/libz.tar.zst -C /tmp/libz \
+    && cp /tmp/libz/usr/lib/libz.so.1.3 /usr/glibc-compat/lib \
     && /usr/glibc-compat/sbin/ldconfig \
-    && rm -rf /tmp/libz /tmp/libz.tar.xz
+    && rm -rf /tmp/libz /tmp/libz.tar.zst
 
 # Maximize only the main/initial window.
 # It seems this is not needed for TMM 3.X version.
