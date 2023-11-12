@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.3.13] - 2023-11-12
+
+### Added
+
+### Changed
+- Upgraded TMM version to latest (v4.3.14).
+
+### Fixed
+
 ## [4.3.13] - 2023-09-02
 
 ### Added
